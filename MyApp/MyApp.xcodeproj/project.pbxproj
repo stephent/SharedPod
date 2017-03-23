@@ -12,7 +12,23 @@
 		DC59772F1E841975005A5022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC59772D1E841975005A5022 /* Main.storyboard */; };
 		DC5977311E841975005A5022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5977301E841975005A5022 /* Assets.xcassets */; };
 		DC5977341E841975005A5022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5977321E841975005A5022 /* LaunchScreen.storyboard */; };
+		DC5977421E841A7A005A5022 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5977411E841A7A005A5022 /* MyFramework.framework */; };
+		DC5977431E841A7A005A5022 /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC5977411E841A7A005A5022 /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC5977441E841A7A005A5022 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC5977431E841A7A005A5022 /* MyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DC5977261E841975005A5022 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		DC5977301E841975005A5022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC5977331E841975005A5022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC5977351E841975005A5022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5977411E841A7A005A5022 /* MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5977421E841A7A005A5022 /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		DC59771D1E841975005A5022 = {
 			isa = PBXGroup;
 			children = (
+				DC5977411E841A7A005A5022 /* MyFramework.framework */,
 				DC5977281E841975005A5022 /* MyApp */,
 				DC5977271E841975005A5022 /* Products */,
 			);
@@ -74,6 +93,7 @@
 				DC5977221E841975005A5022 /* Sources */,
 				DC5977231E841975005A5022 /* Frameworks */,
 				DC5977241E841975005A5022 /* Resources */,
+				DC5977441E841A7A005A5022 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
