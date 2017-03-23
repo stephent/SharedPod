@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DC5977171E84194E005A5022 /* MyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DC5977151E84194E005A5022 /* MyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF6E1755DEAF4BAC05E3FCF7 /* Pods_MyApp_MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39950314F55D08D97EC814C2 /* Pods_MyApp_MyFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39950314F55D08D97EC814C2 /* Pods_MyApp_MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp_MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7385599AB8E3A8C9CBADFEFD /* Pods-MyApp-MyFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-MyFramework.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MyApp-MyFramework/Pods-MyApp-MyFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		935D837D3D15DC1DABC989A6 /* Pods-MyApp-MyFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-MyFramework.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyApp-MyFramework/Pods-MyApp-MyFramework.release.xcconfig"; sourceTree = "<group>"; };
 		DC5977121E84194E005A5022 /* MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5977151E84194E005A5022 /* MyFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFramework.h; sourceTree = "<group>"; };
 		DC5977161E84194E005A5022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -21,17 +25,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6E1755DEAF4BAC05E3FCF7 /* Pods_MyApp_MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		165EF4F49A91093AEF78EF9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39950314F55D08D97EC814C2 /* Pods_MyApp_MyFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DDF3166766260D4D4097265 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7385599AB8E3A8C9CBADFEFD /* Pods-MyApp-MyFramework.debug.xcconfig */,
+				935D837D3D15DC1DABC989A6 /* Pods-MyApp-MyFramework.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DC5977081E84194E005A5022 = {
 			isa = PBXGroup;
 			children = (
 				DC5977141E84194E005A5022 /* MyFramework */,
 				DC5977131E84194E005A5022 /* Products */,
+				9DDF3166766260D4D4097265 /* Pods */,
+				165EF4F49A91093AEF78EF9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,10 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC59771A1E84194E005A5022 /* Build configuration list for PBXNativeTarget "MyFramework" */;
 			buildPhases = (
+				55D665AE2378B80DBD3F562D /* [CP] Check Pods Manifest.lock */,
 				DC59770D1E84194E005A5022 /* Sources */,
 				DC59770E1E84194E005A5022 /* Frameworks */,
 				DC59770F1E84194E005A5022 /* Headers */,
 				DC5977101E84194E005A5022 /* Resources */,
+				06C642AB92ABBFE9F2B3B439 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +152,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06C642AB92ABBFE9F2B3B439 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-MyApp-MyFramework/Pods-MyApp-MyFramework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55D665AE2378B80DBD3F562D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC59770D1E84194E005A5022 /* Sources */ = {
@@ -239,6 +298,7 @@
 		};
 		DC59771B1E84194E005A5022 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7385599AB8E3A8C9CBADFEFD /* Pods-MyApp-MyFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -258,6 +318,7 @@
 		};
 		DC59771C1E84194E005A5022 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 935D837D3D15DC1DABC989A6 /* Pods-MyApp-MyFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
